@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/img/heart.ico" type="image/x-icon">
+    <title>Love Trang :3</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <!-- <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                    XCOMPANY
+                </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-grid-alt'></i>
+            </div>
+        </nav>
+    </header> -->
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home">
+            <div class="home__container container">
+                <div class="home__data">
+                    <!-- <span class="home__subtitle">Trang chủ</span> -->
+                    <h1 class="home__title">Love Trang</h1>
+                    <div class="inputBox">
+                        <input type="text" required="required" id="pass">
+                        <span>Mật khẩu</span>
+                        <p>hint: date love</p>
+                    </div>
+                </div>
+
+                <div class="home__img" onclick="signup()">
+                    <img src="assets/img/ghost-img.png" alt="">
+                    <div class="home__shadow"></div>
+                </div>
+            </div>
+
+            <footer class="home__footer">
+                <span>25122021</span>
+                <span>|</span>
+                <span>lovetrangsongs.com</span>
+            </footer>
+        </section>
+    </main>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        function signup(e) {
+            var password = document.getElementById("pass").value;
+            var s = '25122021';
+            if (password == s) {
+                window.location = 'https://darloi2002.github.io/arloi/lovetrangsongs/';
+            } else {
+                alert("sai mật khẩu!");
+            }
+        }
+    </script>
+</body>
+
+</html>
