@@ -30,25 +30,25 @@ const app = {
     songs: [{
             name: "Lời yêu số 1",
             singer: "Ca si chua ro",
-            path: "https://tainhac365.org/download-music/47211",
+            path: "choanh.mp3",
             image: "a1.jpg"
         },
         {
             name: "Lời yêu số 2",
             singer: "Raftaar x Salim Merchant x Karma",
-            path: "https://nhacvanghay.net/download-mp3/RBj1hiXkprJX/mp3",
+            path: "emlanhat.mp3",
             image: "a2.jpg"
         },
         {
             name: "Lời yêu số 3",
             singer: "Raftaar x Brobha V",
-            path: "https://tainhac365.org/download-music/560637",
+            path: "lydoanhxuathien.mp3",
             image: "a3.jpg"
         },
         {
             name: "Lời yêu số 4",
             singer: "Raftaar x Nawazuddin Siddiqui",
-            path: "https://mp3-s1-m-zmp3.zmdcdn.me/c92822f55db1b4efeda0/4277738103585309815?authen=exp=1657013976~acl=/c92822f55db1b4efeda0/*~hmac=6d98e0f36b53a908a91f0fee42762355&fs=MTY1Njg0MTE3NjQ5NXx3ZWJWNHwxMDMdUngMTA5LjQzLjU2&filename=Yêu 4.mp3",
+            path: "yeu4.mp3",
             image: "a4.jpg"
         },
         {
@@ -254,7 +254,7 @@ const app = {
     loadCurrentSong: function() {
         heading.textContent = this.currentSong.name;
         cdThumb.style.backgroundImage = `url('image/${this.currentSong.image}')`;
-        audio.src = this.currentSong.path;
+        audio.src = "nhac/" + this.currentSong.path;
     },
     loadConfig: function() {
         this.isRandom = this.config.isRandom;
