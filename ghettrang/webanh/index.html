@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Love Trang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <ul>
+            <li class="list active" data-filter="all">Tất cả</li>
+            <li class="list" data-filter="trang">Trang</li>
+            <li class="list" data-filter="couple">Couple</li>
+        </ul>
+        <div class="product">
+            <div class="itemBox" data-item="trang"><img src="images/chang/1.jpg"></div>
+            <div class="itemBox" data-item="trang"><img src="images/chang/2.jpg"></div>
+            <div class="itemBox" data-item="trang"><img src="images/chang/3.jpg"></div>
+            <div class="itemBox" data-item="couple"><img src="images/couple/1.jpg"></div>
+            <div class="itemBox" data-item="trang"><img src="images/chang/4.jpg"></div>
+            <div class="itemBox" data-item="trang"><img src="images/chang/5.jpg"></div>
+
+
+        </div>
+    </section>
+
+    <div class="popup-image">
+        <span>&times</span>
+        <img src="images/mobile1.jpg" alt="">
+    </div>
+
+    <script>
+        let list = document.querySelectorAll('.list');
+        let itemBox = document.querySelectorAll('.itemBox');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function() {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+
+                let dataFilter = this.getAttribute('data-filter');
+                for (let k = 0; k < itemBox.length; k++) {
+                    itemBox[k].classList.remove('active');
+                    itemBox[k].classList.add('hide');
+
+
+                    if (itemBox[k].getAttribute('data-item') == dataFilter || dataFilter == "all") {
+                        itemBox[k].classList.remove('hide');
+                        itemBox[k].classList.add('active');
+                    }
+                }
+            })
+
+        }
+    </script>
+
+    <script>
+        document.querySelectorAll('.product img').forEach(image => {
+
+            image.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        });
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
