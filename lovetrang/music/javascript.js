@@ -76,7 +76,6 @@ const app = {
         // localStorage.setItem(PlAYER_STORAGE_KEY, JSON.stringify(this.config));
     },
     render: function() {
-        const vai = "Lợi yêu Trang";
         const htmls = this.songs.map((song, index) => {
             return `
                         <div class="song ${
