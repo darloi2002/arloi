@@ -28,45 +28,45 @@ const app = {
     // (1/2) Uncomment the line below to use localStorage
     // config: JSON.parse(localStorage.getItem(PlAYER_STORAGE_KEY)) || {},
     songs: [{
-            name: "Lời yêu số 1",
-            singer: "Ca si chua ro",
+            name: "Cho Anh",
+            singer: "Ngọc Dolil x StillaD",
             path: "choanh.mp3",
             image: "a1.jpg"
         },
         {
-            name: "Lời yêu số 2",
-            singer: "Raftaar x Salim Merchant x Karma",
+            name: "Em Là Nhất",
+            singer: "kis x Hoàng KayLee x Yahy",
             path: "emlanhat.mp3",
             image: "a2.jpg"
         },
         {
-            name: "Lời yêu số 3",
-            singer: "Raftaar x Brobha V",
+            name: "Lý Do Lợi Xuất Hiện",
+            singer: "Tân Trần",
             path: "lydoanhxuathien.mp3",
             image: "a3.jpg"
         },
         {
-            name: "Lời yêu số 4",
-            singer: "Raftaar x Nawazuddin Siddiqui",
+            name: "Yêu 4",
+            singer: "Rhymastic",
             path: "yeu4.mp3",
             image: "a4.jpg"
         },
         {
-            name: "Lời yêu số 5",
-            singer: "Raftaar",
-            path: "https://data38.chiasenhac.com/downloads/1872/1/1871825-78d93df6/320/Cho Anh - Ngoc Dolil Stilla D VRT (NhacPro.net).mp3?time=1656893419",
+            name: "Thương",
+            singer: "The Sheep",
+            path: "thuong.mp3",
             image: "a5.jpg"
         },
         {
-            name: "Lời yêu số 6",
-            singer: "Raftaar x kr$na",
-            path: "https://data.chiasenhac.com/down2/2218/1/2217119-aa34b257/m4a/your%20smile%20-%20obito_hnhngan.m4a",
+            name: "Lạ Lùng",
+            singer: "Vũ",
+            path: "lalung.mp3",
             image: "a6.jpg"
         },
         {
-            name: "Lời yêu số 7",
-            singer: "Raftaar x Harjas",
-            path: "https://data17.chiasenhac.com/downloads/2154/1/2153857-3a99b2f4/128/Internet%20Love%20-%20hnhngan_%20Tyronee.mp3",
+            name: "Một Đêm Say",
+            singer: "Thịnh Suy Dinh Dưỡng",
+            path: "motdemsay.mp3",
             image: "a7.jpg"
         }
     ],
@@ -87,7 +87,7 @@ const app = {
                             </div>
                             <div class="body">
                                 <h3 class="title">${song.name}</h3>
-                                <p class="author">${vai}</p>
+                                <p class="author">${song.singer}</p>
                             </div>
                             <div class="option">
                                 <i class="fas fa-ellipsis-h"></i>

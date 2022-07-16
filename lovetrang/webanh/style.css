@@ -100,7 +100,7 @@ section ul li.active {
     object-fit: cover;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
     .popup-image img {
         width: 95%;
     }
