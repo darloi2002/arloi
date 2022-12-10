@@ -230,4 +230,10 @@ i,button{
     .chat-details{
         border-radius: 0;
     }
+
+    .text-chat{
+        height: 60px;
+    }
+
+    
 }
