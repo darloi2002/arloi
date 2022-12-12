@@ -37,6 +37,13 @@ button{
     margin: 2px;
     cursor: pointer;
 }
+#leave-btn{
+    background-color: rgb(214, 45, 45);
+    position: fixed;
+    bottom: 10%;
+    width: 100px;
+    border-radius: 15px;
+}
 #stream-controls{
     display: none;
     justify-content: center;
