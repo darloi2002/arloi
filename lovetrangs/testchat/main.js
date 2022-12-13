@@ -29,6 +29,7 @@ let joinStream = async () =>{
     await joinAndDisplayLocalStream()
     document.getElementById('join-btn').style.display = 'none'
     document.getElementById('chat-wrapper').style.display = 'none'
+    document.body.style.display = 'block'
     document.getElementById('stream-controls').style.display = 'flex'
 }
 
@@ -68,6 +69,7 @@ let leaveAndRemoveLocalStream = async () => {
     document.getElementById('join-btn').style.display = 'block'
     document.getElementById('stream-controls').style.display = 'none'
     document.getElementById('video-streams').innerHTML = ''
+    document.getElementsByTagName('body').style.display = 'flex'
     document.getElementById('chat-wrapper').style.display = 'flex'
 }
 

@@ -2,7 +2,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     text-decoration: none;
     font-family: 'Poppins',sans-serif;
 }
@@ -29,7 +29,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 i,button{
@@ -234,7 +234,7 @@ i,button{
     height:  90vh;
     width: 1400px;
     margin: 0 auto;
-    grid-template-rows: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 .video-container{
     height: 100%;
@@ -256,7 +256,7 @@ i,button{
     cursor: pointer;
 }
 #leave-btn{
-    background-color: rgb(214, 45, 45);
+    background-color: rgb(214, 45, 45) !important;
     position: fixed;
     bottom: 10%;
     width: 100px;
@@ -284,7 +284,7 @@ i,button{
         height: 70px;
     }
     #video-streams{
-        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         width: 95%;
     }
 
