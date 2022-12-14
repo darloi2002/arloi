@@ -66,10 +66,10 @@ let leaveAndRemoveLocalStream = async () => {
         localTracks[i].close()
     }
     await client.leave()
-    document.getElementById('join-btn').style.display = 'block'
+    document.getElementById('join-btn').style.removeProperty('display')
     document.getElementById('stream-controls').style.display = 'none'
     document.getElementById('video-streams').innerHTML = ''
-    document.getElementsByTagName('body').style.display = 'flex'
+    document.body.style.display = 'flex'
     document.getElementById('chat-wrapper').style.display = 'flex'
 }
 
