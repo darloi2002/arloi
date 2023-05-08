@@ -272,6 +272,12 @@ body.dark h1, body.dark .support a {color: #fff;}
         border: 0px;
         margin: 0 auto;
     }
+    .frag-top{
+        height: 88%;
+    }
+    .frag-bot{
+        height: 12%;
+    }
 }
 
 
