@@ -76,7 +76,10 @@ body {
     object-fit: cover;
 }
 
-
+/* TESTTTTTTTTTTTT */
+.night,.backgr-b{
+    display: none;
+}
 
 .night {
     height: 80vh;
@@ -97,6 +100,9 @@ body {
     margin: 20px 20px 0;
     z-index: 10;
     position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: translate(0,0);
 }
 
 body.dark {background-color: #292c35;} /* #9b59b6 */

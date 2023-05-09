@@ -13,6 +13,7 @@ $(document).ready(function() {
     $glasscar = $('.glasscar');
     $lightcar = $('.lightcar');
     
+    
     let flag = true;
     let sun = true;
 
@@ -22,6 +23,40 @@ $(document).ready(function() {
     const cars = ['./assets/Img_05.png', './assets/Img_06.png'];
     $he = screen.height;
     $set = (1 - $he/930);
+
+    //AUDIO
+    // var audioElement = document.createElement('audio');
+    // audioElement.setAttribute('src', './song/tinhcatinhta.mp3');
+    
+    // audioElement.addEventListener('ended', function() {
+    //     this.play();
+    // }, false);
+    
+    // audioElement.addEventListener("canplay",function(){
+    //     $("#length").text("Duration:" + audioElement.duration + " seconds");
+    //     $("#source").text("Tình Ca Tình Ta")
+    //     $("#status").text("Status: Ready to play").css("color","green");
+    // });
+    
+    // audioElement.addEventListener("timeupdate",function(){
+    //     $("#currentTime").text("Current second:" + audioElement.currentTime);
+    // });
+    
+    // $('#play').click(function() {
+    //     audioElement.play()
+    //     $("#status").text("Status: Playing");
+    // });
+    
+    // $('#pause').click(function() {
+    //     audioElement.pause();
+    // });
+    
+    // $('#restart').click(function() {
+    //     audioElement.currentTime = 0;
+    // });
+
+
+    //LOAD
     
     $(document).on('load', function(e){
         $car.css('bottom', function(index, value){
@@ -36,7 +71,6 @@ $(document).ready(function() {
         //     return parseFloat(value) * ($set + 100);
         // });
     })
-
 
     $($switch).on('change', function(){
         
