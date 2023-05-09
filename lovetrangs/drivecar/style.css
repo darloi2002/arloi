@@ -56,10 +56,7 @@
 
 
 body {
-    width: 100vw;
-    height: 100vh;
     overflow-y: hidden;
-    
 }
 
 .backgr-b{
@@ -280,12 +277,6 @@ body.dark h1, body.dark .support a {color: #fff;}
         width: 100vw;
         border: 0px;
         margin: 0 auto;
-    }
-    .frag-top{
-        height: 88%;
-    }
-    .frag-bot{
-        height: 12%;
     }
 }
 
