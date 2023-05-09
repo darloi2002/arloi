@@ -273,10 +273,9 @@ body.dark h1, body.dark .support a {color: #fff;}
 
 @media (max-width: 940px) {
     .night {
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         border: 0px;
-        margin: 0 auto;
     }
 }
 
