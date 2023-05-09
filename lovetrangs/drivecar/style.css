@@ -59,12 +59,25 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-y: hidden;
-    background: url('./assets/w1.jpg');
-    background-size: cover;
-    backdrop-filter: blur(3px);
-    background-repeat: no-repeat;
-    transition: ease-in-out .5s ;
     
+}
+
+.backgr-b{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+    transition: ease-in-out .5s ;
+    filter: blur(3px);
+    
+}
+.backgr-s{
+    width: 100%;
+    height: 100%;
+    
+    transition: ease-in-out .5s ;
+    position: absolute;
+    object-fit: cover;
 }
 
 
@@ -77,7 +90,6 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     /* transform: translate(50%,50%); */
-    background: url('./assets/w1.jpg');
     background-size: cover;
     position: absolute;
     box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.4);

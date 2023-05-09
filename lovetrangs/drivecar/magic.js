@@ -12,13 +12,13 @@ $(document).ready(function() {
     $bodycar = $('.bodycar');
     $glasscar = $('.glasscar');
     $lightcar = $('.lightcar');
+    
     let flag = true;
     let sun = true;
 
     
 
     var delayInMilliseconds = 1000;
-    const background = ['./assets/w1.jpg','./assets/w2.jpg'];
     const cars = ['./assets/Img_05.png', './assets/Img_06.png'];
     $he = screen.height;
     $set = (1 - $he/930);
@@ -39,18 +39,15 @@ $(document).ready(function() {
 
 
     $($switch).on('change', function(){
+        
+        $temp = $('.backgr-b').attr('data-src');
+        $('.backgr-b').attr('data-src',$('.backgr-b').attr('src'));
+        $('.backgr-b').attr('src',$temp)
+
+        $temp = $('.backgr-s').attr('data-src');
+        $('.backgr-s').attr('data-src',$('.backgr-s').attr('src'));
+        $('.backgr-s').attr('src',$temp)
         if(sun){
-            
-            $night.css({
-                'background': 'url(' + background[1] + ')',
-                'background-size' : 'cover',
-            });
-            
-            
-            $body.css({
-                'background': 'url(' + background[1] + ')',
-                'background-size' : 'cover'
-            });
 
             $bodycar.attr('fill', 'url(#BodyCarGradient)')
             $glasscar.attr('fill', 'url(#GlassCarGradient)')
@@ -73,15 +70,6 @@ $(document).ready(function() {
             
             sun = false;
         }else{
-            $night.css({
-                'background': 'url(' + background[0] + ')',
-                'background-size' : 'cover'
-            });
-            
-            $body.css({
-                'background': 'url(' + background[0] + ')',
-                'background-size' : 'cover'
-            });
 
             $bodycar.attr('fill', 'url(#BodyCarGradient2)')
             $glasscar.attr('fill', 'url(#GlassCarGradient2)')
@@ -103,6 +91,7 @@ $(document).ready(function() {
             sun = true;
 
         }
+
 
     })
 
