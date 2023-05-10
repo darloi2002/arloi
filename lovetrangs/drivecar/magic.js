@@ -24,25 +24,31 @@ $(document).ready(function() {
     $he = screen.height;
     $set = (1 - $he/930);
 
+     
     //AUDIO
-    var audioElement = document.createElement('audio');
-    var souraudio = document.createElement('source');
-    souraudio.setAttribute('src', './song/tinhcatinhta.mp3');
+    var audioElement = new Audio();
 
-    audioElement.append(souraudio);
+    
+    audioElement.src = './song/tinhcatinhta.mp3'
+
     
     audioElement.addEventListener('ended', function() {
         this.play();
     }, false);
-
     
     $('.audio-track').click(function() {
-        audioElement.muted = !audioElement.muted;
-        $('.volume').toggleClass('hide');
-        $('.audio-track-circle').css('background-color', audioElement.muted == false ? 'var(--volume-bg-circle-on)' : 'var(--volume-bg-circle-off)')
-    });
+        if(audioElement.paused == true){
+            audioElement.play();
+            audioElement.muted = false;
+        }else{
+            audioElement.muted = !audioElement.muted;
+
+        }
+            $('.volume').toggleClass('hide');
+            $('.audio-track-circle').css('background-color', audioElement.muted == false ? 'var(--volume-bg-circle-on)' : 'var(--volume-bg-circle-off)')
+
+        });
     
-    audioElement.play();
 
     
 
@@ -139,7 +145,6 @@ $(document).ready(function() {
     });
 
     
-    $('.audio-track').append(audioElement);
 
     
 });

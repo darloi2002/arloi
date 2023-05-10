@@ -122,7 +122,7 @@ body {
 }
 
 .audio-track-circle{
-    background-color: var(--volume-bg-circle-on);
+    background-color: var(--volume-bg-circle-off);
     width: 45px;
     height: 45px;
     border-radius: 50%;
