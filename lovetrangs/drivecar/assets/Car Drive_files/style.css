@@ -1,11 +1,3 @@
-:root{
-    --volume-bg: #ffa6a6;
-    --volume-bg-circle-on: #1c5eba;
-    --volume-bg-circle-off: #535c69;
-
-}
-
-
 *{
     
     margin: 0;
@@ -73,7 +65,7 @@ body {
     position: absolute;
     object-fit: cover;
     transition: ease-in-out .5s ;
-    filter: blur(3px) brightness(40%);
+    filter: blur(3px);
     
 }
 .backgr-s{
@@ -90,55 +82,31 @@ body {
 } */
 
 .audio-track{
-    width: 60px;
+    width: 70px;
     top: 50%;
     position: absolute;
     height: 60px;
+    background-color: #99330b;
     align-items: center;
     display: flex;
-    background-color: var(--volume-bg);
     justify-content: flex-end;
-    border-radius: 0% 50% 50% 0%;
-    border-color: #000;
-    cursor: pointer;
-}
-.audio-track::before{
-    content: '';
-    width: 20px;
-    top: -10px;
-    position: absolute;
-    background:radial-gradient(circle at 85% -95%,transparent,transparent 20px,var(--volume-bg) 1px);
-    height: 10px;
-    left: 0;
-}
-.audio-track::after{
-    content: '';
-    width: 20px;
-    bottom: -10px;
-    position: absolute;
-    height: 10px;
-    background:radial-gradient(circle at 85% 195%,transparent,transparent 20px,var(--volume-bg) 1px);
-    left: 0;
 }
 
 .audio-track-circle{
-    background-color: var(--volume-bg-circle-on);
-    width: 45px;
-    height: 45px;
+    background-color: #4d4c68;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     margin: auto;
+    
     align-items: center;
     display: flex;
     justify-content: flex-end;
 }
-.volume{
-    width: 30px;
+.bi-volume-up{
+    width: 40px;
     margin: auto;
-    fill: #fff;
-}
-
-.hide{
-    display: none;
+    color: #fff;
 }
 
 .night {
@@ -327,32 +295,12 @@ body.dark h1, body.dark .support a {color: #fff;}
     }
 }
 
-@keyframes tranVolume{
-    0%{
-        transform: translateY(-600px);
-    }
-    75%{
-        transform: translateY(-50px);
-    }
-    90%{
-        transform: translateY(20px);
-    }
-    95%{
-        transform: translateY(-5px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
 
 .moveRight {
     animation: moveRight 6s linear infinite;
 }
 
-.moveY{
-    animation: tranVolume .6s linear;
-}
+
 .suspension {
     animation: suspension 1s linear infinite;
 }
