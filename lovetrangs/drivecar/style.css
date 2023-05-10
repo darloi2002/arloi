@@ -363,6 +363,14 @@ body.dark h1, body.dark .support a {color: #fff;}
         width: 100%;
         border: 0px;
     }
+    @keyframes moveRight {
+        100% {
+            transform: translateX(-950px)
+        }
+    }
+    .moveRight {
+        animation: moveRight 2s linear infinite;
+    }
 }
 
 
