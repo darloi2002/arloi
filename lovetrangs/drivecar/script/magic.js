@@ -6,57 +6,57 @@ $(document).ready(function() {
     $night = $('.night');
     $switch = $('#checkbox');
     $planet = $('.planet');
-    
+
     $body = $('body');
 
     $bodycar = $('.bodycar');
     $glasscar = $('.glasscar');
     $lightcar = $('.lightcar');
-    
-    
+
+
     let flag = true;
     let sun = true;
 
-    
+
 
     var delayInMilliseconds = 1000;
     const cars = ['./assets/Img_05.png', './assets/Img_06.png'];
     $he = screen.height;
-    $set = (1 - $he/930);
+    $set = (1 - $he / 930);
 
-     
+
     //AUDIO
     var audioElement = new Audio();
 
-    
+
     audioElement.src = './song/tinhcatinhta.mp3'
 
-    
+
     audioElement.addEventListener('ended', function() {
         this.play();
     }, false);
-    
+
     $('.audio-track').click(function() {
-        if(audioElement.paused == true){
+        if (audioElement.paused == true) {
             audioElement.play();
             audioElement.muted = false;
-        }else{
+        } else {
             audioElement.muted = !audioElement.muted;
 
         }
-            $('.volume').toggleClass('hide');
-            $('.audio-track-circle').css('background-color', audioElement.muted == false ? 'var(--volume-bg-circle-on)' : 'var(--volume-bg-circle-off)')
+        $('.volume').toggleClass('hide');
+        $('.audio-track-circle').css('background-color', audioElement.muted == false ? 'var(--volume-bg-circle-on)' : 'var(--volume-bg-circle-off)')
 
-        });
-    
+    });
 
-    
+
+
 
 
     //LOAD
-    
-    $(document).on('load', function(e){
-        $car.css('bottom', function(index, value){
+
+    $(document).on('load', function(e) {
+        $car.css('bottom', function(index, value) {
             return parseFloat(value);
         });
 
@@ -69,51 +69,51 @@ $(document).ready(function() {
         // });
     })
 
-    $($switch).on('change', function(){
-        
+    $($switch).on('change', function() {
+
         $temp = $('.backgr-b').attr('data-src');
-        $('.backgr-b').attr('data-src',$('.backgr-b').attr('src'));
-        $('.backgr-b').attr('src',$temp)
+        $('.backgr-b').attr('data-src', $('.backgr-b').attr('src'));
+        $('.backgr-b').attr('src', $temp)
 
         $temp = $('.backgr-s').attr('data-src');
-        $('.backgr-s').attr('data-src',$('.backgr-s').attr('src'));
-        $('.backgr-s').attr('src',$temp)
-        if(sun){
+        $('.backgr-s').attr('data-src', $('.backgr-s').attr('src'));
+        $('.backgr-s').attr('src', $temp)
+        if (sun) {
 
             $bodycar.attr('fill', 'url(#BodyCarGradient)')
             $glasscar.attr('fill', 'url(#GlassCarGradient)')
             $lightcar.attr('xlink:href', '#sym-car-light')
-            
+
             $planet.removeClass('planet-ani');
-            setTimeout(() => { 
+            setTimeout(() => {
                 $planet.addClass('planet-ani')
             }, 20);
 
-            setTimeout(() => { 
+            setTimeout(() => {
                 $planet.attr({
-                    'xlink:href':'#pmoon',
+                    'xlink:href': '#pmoon',
                     'fill': 'url(#TheMoon)'
                 });
                 $planet.removeClass('filter-sun');
                 $planet.addClass('filter-moon');
             }, 500);
 
-            
+
             sun = false;
-        }else{
+        } else {
 
             $bodycar.attr('fill', 'url(#BodyCarGradient2)')
             $glasscar.attr('fill', 'url(#GlassCarGradient2)')
             $lightcar.attr('xlink:href', '')
 
             $planet.removeClass('planet-ani');
-            setTimeout(() => { 
+            setTimeout(() => {
                 $planet.addClass('planet-ani')
             }, 20);
 
-            setTimeout(() => { 
+            setTimeout(() => {
                 $planet.attr({
-                    'xlink:href':'#psun',
+                    'xlink:href': '#psun',
                     'fill': 'url(#TheSun)'
                 })
                 $planet.removeClass('filter-moon');
@@ -130,7 +130,7 @@ $(document).ready(function() {
     $($surface).toggleClass('moveRight');
     $($car).toggleClass('suspension');
     $($planet).toggleClass('filter-sun');
-    
+
 
     $(document).on('keypress', function(e) {
         if (e.which == 13) {
@@ -144,13 +144,14 @@ $(document).ready(function() {
         }
     });
 
-    
 
-    
+
+
 });
 
 
-$(window).on("load",function(){
+$(window).on("load", function() {
     $(".loader-wrapper").fadeOut("slow");
     $('.audio-track').toggleClass('moveY');
+    $('.shadow').toggleClass('moveForm');
 });
