@@ -266,6 +266,7 @@ body.dark {
     line-height: 70%s;
     color: white;
     text-align: center;
+    font-size: 1.2em;
 }
 
 .lg-input::placeholder {
