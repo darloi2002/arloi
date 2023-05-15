@@ -25,6 +25,14 @@ $(document).ready(function() {
     $set = (1 - $he / 930);
 
 
+    //EVENT
+
+
+    // $('#changePass').click(function() {
+    //     exports.acc = [1, 2, 3];
+    // })
+
+
     //AUDIO
     var audioElement = new Audio();
 
@@ -71,13 +79,15 @@ $(document).ready(function() {
 
     $($switch).on('change', function() {
 
+        $road.toggleClass('road-night');
         $temp = $('.backgr-b').attr('data-src');
         $('.backgr-b').attr('data-src', $('.backgr-b').attr('src'));
         $('.backgr-b').attr('src', $temp)
 
         $temp = $('.backgr-s').attr('data-src');
         $('.backgr-s').attr('data-src', $('.backgr-s').attr('src'));
-        $('.backgr-s').attr('src', $temp)
+        $('.backgr-s').attr('src', $temp);
+
         if (sun) {
 
             $bodycar.attr('fill', 'url(#BodyCarGradient)')
@@ -143,6 +153,9 @@ $(document).ready(function() {
             }
         }
     });
+
+
+
 
 
 

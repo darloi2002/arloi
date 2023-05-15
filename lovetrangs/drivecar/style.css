@@ -414,12 +414,15 @@ body.dark .support a {
 .road {
     height: 100%;
     width: 100%;
-    /* background: linear-gradient(rgba(50, 36, 71,1),rgba(44, 36, 52, 1)); */
-    background: linear-gradient(rgb(45, 40, 56), rgb(27, 23, 34));
     display: block;
     position: absolute;
+    background: linear-gradient(rgb(45, 40, 56), rgb(27, 23, 34));
     bottom: 0%;
     left: 0%;
+}
+
+.road-night {
+    background: linear-gradient(rgb(45, 35, 59), rgb(31, 21, 41)) !important;
 }
 
 .car {
@@ -494,10 +497,12 @@ body.dark .support a {
 
 @keyframes tranLogin {
     0% {
-        transform: translate(-50%, -600px);
+        opacity: 0;
+        transform: translate(-50%, -300px);
     }
     100% {
         transform: translateY(-50%, 0);
+        opacity: 1;
     }
 }
 
@@ -514,7 +519,7 @@ body.dark .support a {
 }
 
 .moveForm {
-    animation: tranLogin 1.5s linear
+    animation: tranLogin 1s ease-in-out;
 }
 
 @media (max-width: 940px) {
