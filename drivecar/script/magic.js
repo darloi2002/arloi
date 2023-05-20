@@ -168,3 +168,23 @@ $(window).on("load", function() {
     $('.audio-track').toggleClass('moveY');
     $('.shadow').toggleClass('moveForm');
 });
+
+
+
+
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+
+window.addEventListener('keydown', function (e) {
+
+// if the keyCode is 16 ( shift key was pressed )
+if (e.key == 'F12') {
+
+// prevent default behaviour
+e.preventDefault();
+
+return false;
+}
+
+});
