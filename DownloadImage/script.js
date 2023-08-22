@@ -50,7 +50,7 @@ const resizeAndDownload = () => {
     ctx.drawImage(previewImg, 0, 0, canvas.width, canvas.height);
     
     // passing canvas data url as href value of <a> element
-    a.href = canvas.toDataURL("image/jpeg", imgQuality);
+    a.href = canvas.toDataURL("image/png", imgQuality);
     a.download = new Date().getTime(); // passing current time as download value
     a.click(); // clicking <a> element so the file download
 }
