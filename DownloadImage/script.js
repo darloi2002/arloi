@@ -51,8 +51,10 @@ const resizeAndDownload = () => {
     
     // passing canvas data url as href value of <a> element
     a.href = canvas.toDataURL("image/png", imgQuality);
-    a.download = new Date().getTime(); // passing current time as download value
+    const name = new Date().getTime(); // passing current time as download value
+    a.download = `${name}.png`
     a.click(); // clicking <a> element so the file download
+    a.remove();
 }
 
 downloadBtn.addEventListener("click", resizeAndDownload);
